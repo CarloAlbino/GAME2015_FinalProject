@@ -9,6 +9,6 @@ namespace Player
         public static bool Hiding()
         {
             return GameObject.FindGameObjectWithTag("Player").GetComponent<dm_SafeZone>().Hiding;
-        }
+        }        
     }
 }
