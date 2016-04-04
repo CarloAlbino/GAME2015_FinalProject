@@ -20,9 +20,10 @@ public class MoveingCanvas : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (moveinput.GetComponent<Rigidbody>().velocity.magnitude > 00.1f)
-        {
-
+        Debug.Log("moveinput"+moveinput.GetComponent<Rigidbody>().velocity.magnitude);
+        if (Input.GetKey (KeyCode.UpArrow)|| Input.GetKey(KeyCode.DownArrow)|| Input.GetKey(KeyCode.RightArrow)|| Input.GetKey(KeyCode.LeftArrow) ||Input.GetKey(KeyCode.Space))
+       {
+            Debug.Log(" it works");
             if (CanSwicth == true)
             {
                 transform.Translate(Vector3.up * speed * Time.deltaTime);
@@ -32,5 +33,8 @@ public class MoveingCanvas : MonoBehaviour {
                 transform.Translate(-Vector3.up * speed * Time.deltaTime);
             }
         }
-	}
+
+
+        Debug.Log("moveinput : " + moveinput.GetComponent<Rigidbody>().velocity.magnitude);
+    }
 }
