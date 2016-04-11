@@ -3,7 +3,8 @@ using System.Collections;
 
 public class playercollision : MonoBehaviour {
 
-    public int keycounter;
+    public GameObject gamemgn = null;
+
 	// Use this for initialization
 	void Start () {
             
@@ -20,7 +21,7 @@ public class playercollision : MonoBehaviour {
             {
             Debug.Log(" You got a key");
             Destroy(other.gameObject);
-                keycounter += 1;
+                gamemgn.GetComponent<gamemgn>().ADDKeyUi(); 
             }
         }
     }
