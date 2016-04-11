@@ -27,6 +27,14 @@ public class ca_DetectPlayer : MonoBehaviour {
 	void Update () 
     {
         DetectionFan();
+        if(Player.Get.Hiding())
+        {
+            if (chaseCount != null)
+            {
+                StopCoroutine(chaseCount);
+            }
+            patrolScript.SetPartol(true);
+        }
 	}
 
     private void DetectionFan()
