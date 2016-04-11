@@ -56,7 +56,7 @@ public class ca_WaypointList : MonoBehaviour {
 
     private void CheckArrive()
     {
-        if((waypoints[nextTarget].position - agent.transform.position).magnitude <= 1f)
+        if((waypoints[nextTarget].position - agent.transform.position).magnitude <= 2f)
         {
             nextTarget++;
             if (nextTarget >= waypoints.Length)
